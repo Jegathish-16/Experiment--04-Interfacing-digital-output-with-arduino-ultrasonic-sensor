@@ -1,5 +1,7 @@
 # EXPERIMENT-NO--05-Distance measurement using Ultrasonic sensor
+Name : JEGATHISH S
 
+Register NO : 212221230041
 ## AIM: 
 To interface an ultrasonic pair and measure the distance in centimeters , calculate the error
  
@@ -55,12 +57,37 @@ speed of sound in the air at 20ºC (68ºF) = 343m/s
 
 
 ### PROGRAM 
-
-
-
-
-
-
+```
+#define echopin 3
+#define trigpin  2
+long duration;
+int distance;
+void setup()
+{
+  pinMode(trigpin,OUTPUT);
+  pinMode(echopin,INPUT);
+  Serial.begin(9600);
+}
+void loop()
+{
+  digitalWrite(trigpin,LOW);
+  delay(20);
+  digitalWrite(trigpin,HIGH);
+  delay(20);
+  digitalWrite(trigpin,LOW);
+  
+  duration = pulseIn(echopin,HIGH);
+  
+  distance = duration * 0.034/2;
+  Serial.print("Distance  =  ");
+  Serial.print(distance);
+  Serial.println("CM");
+}
+```
+### Circuit Diagram:
+![output](s1.png)
+### Serial Monitor
+![output](s2.png)
 ### Distance vs measurement table 
 
 			
@@ -69,7 +96,7 @@ speed of sound in the air at 20ºC (68ºF) = 343m/s
 			
 			
 
-![image](https://user-images.githubusercontent.com/36288975/190135379-52ebacd5-ccd5-460f-a4cd-4d0ad1d9b179.png)
+![image](s3.png)
 
 			
 			
@@ -77,6 +104,8 @@ speed of sound in the air at 20ºC (68ºF) = 343m/s
 			
 			
 			Average error = sum/ number of readings 
+			Average error = 23.9 / 10
+			Average error = 2.39
  
 
 
@@ -87,6 +116,7 @@ speed of sound in the air at 20ºC (68ºF) = 343m/s
 
 
 ### RESULTS
+Thus the distance value is measured in "CM" using ultrasonic sensor.
 
 
 

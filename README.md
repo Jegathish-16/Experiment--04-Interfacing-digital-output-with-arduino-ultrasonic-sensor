@@ -87,7 +87,7 @@ void loop()
 ### Circuit Diagram:
 ![output](s1.png)
 ### Serial Monitor
-![output](s2.png)
+![output](S2.png)
 ### Distance vs measurement table 
 
 			

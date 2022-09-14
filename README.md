@@ -104,8 +104,8 @@ void loop()
 			
 			
 			Average error = sum/ number of readings 
-			Average error = 23.9 / 10
-			Average error = 2.39
+			Average error = 3.1 / 5
+			Average error = 0.62
  
 
 
